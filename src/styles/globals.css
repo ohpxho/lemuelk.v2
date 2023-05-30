@@ -16,5 +16,34 @@
   }
 }
 
-body {
+@layer components {
+  * {
+    cursor: none;
+  }
+
+  body {
+    @apply bg-white text-slate-700;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent);
+    background-size:50px 50px;
+  } 
+
+  .cursor {
+    position:absolute;
+    pointer-events: none;
+  }
+
+  .cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 1000;
+  }
+
+  .cursor__ball circle {
+    fill: #f7f8fa;
+  }
+
 }
+
+
