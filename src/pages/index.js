@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Navigation from './navigation';
 import Main from './main';
 import Projects from './projects';
+import Skills from './skills';
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import gsap from 'gsap';
@@ -23,13 +24,16 @@ export default function Home() {
 
     // Move the cursor
     function onMouseMove(e) {
+      const scrollX = window.scrollX || window.pageXOffset;
+      const scrollY = window.scrollY || window.pageYOffset;
+
       gsap.to(bigBall, 0.4, {
-        x: e.pageX - 15,
-        y: e.pageY - 15,
+        x: e.pageX - 15 - scrollX,
+        y: e.pageY - 15 - scrollY,
       });
       gsap.to(smallBall, 0.1, {
-        x: e.pageX - 5,
-        y: e.pageY - 7,
+        x: e.pageX - 5 - scrollX,
+        y: e.pageY - 7 - scrollY,
       });
     }
 
@@ -55,17 +59,17 @@ export default function Home() {
   }, []);
 
   return (
-    <main className={`min-h-screen ${inter.className}`}>
-      <div class="cursor">
-        <div class="cursor__ball cursor__ball--big ">
+    <main className={`min-h-screen h-max ${inter.className}`}>
+      <div className="cursor">
+        <div className="cursor__ball cursor__ball--big ">
           <svg height="30" width="30">
-            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            <circle cx="15" cy="15" r="12" strokeWidth="0"></circle>
           </svg>
         </div>
         
-        <div class="cursor__ball cursor__ball--small">
+        <div className="cursor__ball cursor__ball--small">
           <svg height="10" width="10">
-            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            <circle cx="5" cy="5" r="4" strokeWidth="0"></circle>
           </svg>
         </div>
       </div>
@@ -73,6 +77,7 @@ export default function Home() {
       <Navigation />
       <Main />
       <Projects />
+      <Skills />
     </main>
   )
 }
