@@ -1,15 +1,26 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Navigation from './navigation';
 import Main from './main';
 import Projects from './projects';
 import Skills from './skills';
+import About from './about';
+import Contact from './contact';
+import Footer from './footer';
+import Data from "../data.json";
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import gsap from 'gsap';
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
+    setData(Data);
+  }, []);
+
   useEffect(() => {
     const bigBall = document.querySelector('.cursor__ball--big');
     const smallBall = document.querySelector('.cursor__ball--small');
@@ -75,9 +86,12 @@ export default function Home() {
       </div>
 
       <Navigation />
-      <Main />
+      <Main data={data.main} />
       <Projects />
       <Skills />
+      <About data={data.about}/>
+      <Contact />
+      <Footer />
     </main>
   )
 }

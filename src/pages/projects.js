@@ -2,10 +2,10 @@
 const Projects = () => {
 
 	return (
-		<div className="flex justify-center w-full h-max bg-slate-100 pb-10">
+		<div id="projects" className="flex justify-center w-full h-max bg-sky-100 pb-10 z-20">
 			<div className="flex flex-col w-full lg:w-9/12 xl:w-7xl py-4 px-6 max-w-7xl h-max">
-				<h1 className="text-3xl mt-10">Featured Projects</h1>
-				<h2 className="text-slate-500">What I'm capable of.</h2>
+				<h1 className="text-3xl text-blue-500 font-bold mt-10">Featured Projects</h1>
+				<h2 className="text-blue-500">What I'm capable of.</h2>
 
 				<ul className="flex flex-col gap-16 mt-16">
 					<li className="flex">

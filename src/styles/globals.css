@@ -19,6 +19,7 @@
 @layer components {
   * {
     cursor: none;
+    scroll-behavior: smooth;
   }
 
   body {

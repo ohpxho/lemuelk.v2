@@ -3,7 +3,7 @@ const Skills = () => {
 
 	return (
 		<div className="flex justify-center w-full h-max pb-10">
-			<div className="flex flex-col w-full lg:w-9/12 xl:w-7xl py-4 px-6 max-w-7xl h-max">
+			<div className="flex flex-col w-full lg:w-9/12 xl:w-7xl py-20 px-6 max-w-7xl h-max">
 				<h1 className="mt-10 text-3xl">Skills & Technologies</h1>
 				<h2 className="text-slate-500">What I know.</h2>
 				
