@@ -87,8 +87,8 @@ export default function Home() {
 
       <Navigation />
       <Main data={data.main} />
-      <Projects />
-      <Skills />
+      <Projects data={data.projects}/>
+      <Skills data={data.skills}/>
       <About data={data.about}/>
       <Contact />
       <Footer />

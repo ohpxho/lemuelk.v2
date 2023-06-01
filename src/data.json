@@ -3,7 +3,83 @@
     "desc": "I am a web developer with a passion for continuous learning and problem-solving. I am committed to delivering high-quality web solutions by leveraging my problem-solving skills and staying up-to-date with the latest industry trends."
   },
   "about": {
+    "image_url": "/me.jpg",
   	"first": "I have successfully completed my Bachelor of Science in Information Technology (BSIT) degree at Quezon City University. Throughout my academic journey, I have honed my skills and deepened my knowledge in various areas of technology. I am confident in my abilities and enthusiastic about continuously learning and growing through hands-on experiences.",
   	"second": "I am passionate about web development and have a strong interest in AI and Machine Learning. I have acquired a solid understanding of clean coding practices and good design principles. Additionally, I possess a strong knowledge of Algorithms and Data Structures, regularly challenging myself to solve problems on platforms such as LeetCode and CodeChef. Continuous learning is an integral part of my journey, and I find great comfort in constantly improving my problem-solving skills. I am determined to enhance my abilities in order to excel in my chosen fields."
+  },
+  "projects": {
+    "featured": [
+      {
+        "image_url": "",
+        "title": "Sorting Visulizer",
+        "desc": "Visualizer for multiple sorting algorithms built using Javascript. You could select an algorithm to visulaize which is consist of: bubble, insertion, quick, selection, and merge sort. Learning the fundamental sorting algorithms will be quick and efficient with this visualizer.",
+        "keyword": ["javascript", "async", "sorting"],
+        "website_link": "https://js-sorting-visualizer.vercel.app/index.html",
+        "github_link": "https://github.com/ohpxho/js-sorting-visualizer.git"
+      },
+      {
+        "image_url": "",
+        "title": "Sorting Visulizer",
+        "desc": "Visualizer for multiple sorting algorithms built using Javascript. You could select an algorithm to visulaize which is consist of: bubble, insertion, quick, selection, and merge sort. Learning the fundamental sorting algorithms will be quick and efficient with this visualizer.",
+        "keyword": ["javascript", "async", "sorting"],
+        "website_link": "https://js-sorting-visualizer.vercel.app/index.html",
+        "github_link": "https://github.com/ohpxho/js-sorting-visualizer.git"
+      }
+    ],
+    "others": [
+      {
+        "image_url": "",
+        "title": "Weather App",
+        "desc": "A weather application that displays the current and future weather forecast using weather api. Implemented with chart js to visualize the temparature, humidity, and wind.",
+        "keyword": ["javascript", "api", "chartjs"],
+        "website_link": "https://js-weather-app-iota.vercel.app/",
+        "github_link": "https://github.com/ohpxho/js-weather-app.git"
+      },
+      {
+        "image_url": "",
+        "title": "Weather App",
+        "desc": "A weather application that displays the current and future weather forecast using weather api.",
+        "keyword": ["javascript", "api", "chartjs"],
+        "website_link": "https://js-weather-app-iota.vercel.app/",
+        "github_link": "https://github.com/ohpxho/js-weather-app.git"
+      },
+      {
+        "image_url": "",
+        "title": "Weather App",
+        "desc": "A weather application that displays the current and future weather forecast using weather api.",
+        "keyword": ["javascript", "api", "chartjs"],
+        "website_link": "https://js-weather-app-iota.vercel.app/",
+        "github_link": "https://github.com/ohpxho/js-weather-app.git"
+      }
+    ]
+  },
+  "skills": {
+    "frontend": [
+      { "title": "HMTL", "proficiency": "w-4/5" },
+      { "title": "CSS", "proficiency": "w-4/5" },
+      { "title": "Javascript", "proficiency": "w-4/5" },
+      { "title": "jQuery", "proficiency": "w-1/2" },
+      { "title": "React", "proficiency": "w-1/2" },
+      { "title": "NextJS", "proficiency": "w-2/5" },
+      { "title": "Bootstrap", "proficiency": "w-4/5" },
+      { "title": "TailwindCSS", "proficiency": "w-4/5" }
+    ],
+    "backend": [
+      { "title": "PHP", "proficiency": "w-4/5" },
+      { "title": "Node", "proficiency": "w-2/5" },
+      { "title": "Express", "proficiency": "w-2/5" },
+      { "title": "MongoDB", "proficiency": "w-2/5" },
+      { "title": "MySQL", "proficiency": "w-4/5" },
+      { "title": "SQL", "proficiency": "w-1/2" },
+      { "title": "Python", "proficiency": "w-2/5" },
+      { "title": "Java", "proficiency": "w-2/5" }
+    ],
+    "tools": [
+      { "title": "Github & Git", "proficiency": "w-4/5" },
+      { "title": "OpenAI", "proficiency": "w-2/5" },
+      { "title": "Sublime", "proficiency": "w-3/5" },
+      { "title": "Figma", "proficiency": "w-1/2" }
+    ]
   }
 }
+
