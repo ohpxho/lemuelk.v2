@@ -13,7 +13,7 @@ const Projects = (props) => {
 							<li className="flex flex-col lg:flex-row group lg:even:flex-row-reverse">
 								<div className={`flex flex-col lg:flex-row items-center gap-6 w-full lg:w-3/5 justify-center ${i%2!=0? 'lg:flex-row-reverse' : ''}`}>
 									<span className="text-blue-500">0{i+1}</span>
-									<div className="w-full lg:w-10/12 aspect-video border rounded-md border-2 bg-blue-500 border-blue-200">
+									<div className="w-full md:w-10/12 aspect-video border rounded-md border-2 bg-blue-500 border-blue-200">
 										<img src={d.image_url} className={`w-full h-full ${i%2!=0? '-skew-y-3' : 'skew-y-3'}  rounded-md group-hover:skew-y-0 transition-all`}/>
 									</div>
 								</div>
@@ -28,7 +28,7 @@ const Projects = (props) => {
 									
 									</div>
 
-									<p className="mt-5 text-slate-500 group-hover:text-slate-700">{d.desc}</p>
+									<p className="mt-5 text-slate-500 md:px-20 lg:px-0 group-hover:text-slate-700">{d.desc}</p>
 									
 									<div className="mt-5 flex gap-4 text-sm justify-center lg:justify-start">
 										<a href={d.github_link} target="_blank" className="flex gap-2 group-hover:text-slate-600 hover:!text-blue-500 text-slate-500 items-center hoverable">
@@ -54,7 +54,7 @@ const Projects = (props) => {
 				<h1 className="mt-10 font-bold text-blue-500 text-3xl">Other Noteworthy Projects</h1>
 				<h2 className="text-blue-500">Got to do something more.</h2>
 
-				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10 text-start">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 text-start">
 					
 					{ props.data?
 						props.data.others.map((d,i) => (
