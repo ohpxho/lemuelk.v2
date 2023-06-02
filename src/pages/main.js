@@ -22,14 +22,20 @@ const Main = (props) => {
 	}, []);
 
 	return (
-		<div id="main" className="flex justify-center w-full h-max">
+		<div id="main" className="flex justify-center w-full h-max test animation-element">
 			<div className="pt-10 pb-44 flex w-full xl:w-7xl items-center px-6 max-w-7xl h-max">
-				<div className="w-full text-center lg:text-start">
+				<div className="w-full">
 					<p>Hi there! I am</p>
-					<div className="font-bold text-5xl md:text-7xl xl:text-8xl text-blue-500 from-blue-500 via-blue-500 to-blue-700 bg-gradient-to-b bg-clip-text text-transparent">Lemuel k So</div>
-					<p className="mt-5 md:px-20 lg:px-0">{ props.data? props.data.desc : 'I am a web developer with a passion for continuous learning and problem-solving. I am committed to delivering high-quality web solutions by leveraging my problem-solving skills and staying up-to-date with the latest industry trends.' }</p>
 
-					<div className="flex items-center justify-center lg:justify-start gap-2 mt-5">
+					<div className="relative">
+						<h1 className="font-bold text-5xl md:text-7xl xl:text-8xl text-blue-700">Lemuel k So</h1>
+						<h1 className="absolute top-0 -translate-x-1 hover:-translate-x-2 transition-all font-bold text-5xl md:text-7xl xl:text-8xl text-blue-500">Lemuel k So</h1>
+						
+					</div>
+
+					<p className="mt-5">{ props.data? props.data.desc : 'I am a web developer with a passion for continuous learning and problem-solving. I am committed to delivering high-quality web solutions by leveraging my problem-solving skills and staying up-to-date with the latest industry trends.' }</p>
+
+					<div className="flex items-center gap-2 mt-5">
 						<a href="#contact" className="py-3 px-5 border border-blue-500 hover:text-white hover:bg-blue-500 text-blue-500 transition-all hoverable">Get In Touch</a>
 						<a href="/RESUME.pdf" target="_blank" className="flex gap-2 items-center py-3 px-5 border border-blue-500 bg-blue-500 text-white hoverable">
 							Resume
@@ -45,8 +51,6 @@ const Main = (props) => {
 					 	<div className="text-blue-700" ref={tagCloudRef}></div>
 					 </div>
 				</div>
-
-
 			</div>
 		</div>
 	);

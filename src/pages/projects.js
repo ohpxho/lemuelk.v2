@@ -4,8 +4,13 @@ const Projects = (props) => {
 
 	return (
 		<div id="projects" className="relative flex justify-center w-full h-max bg-blue-100 z-20">
-			<div className="flex flex-col w-full xl:w-7xl py-32 px-6 max-w-7xl h-max text-center lg:text-start">
-				<h1 className="text-3xl text-blue-500 font-bold">Featured Projects</h1>
+			<div className="flex flex-col w-full xl:w-7xl py-32 px-6 max-w-7xl h-max text-center lg:text-start test animation-element">
+				<div className="w-full flex justify-center lg:justify-start">
+					<div className="relative w-max group">
+						<h1 className="text-3xl font-bold text-blue-700">Featured Projects</h1>
+						<h1 className="absolute top-0 text-3xl -translate-y-0.5 group-hover:-translate-y-0.7 font-bold text-blue-500 transition-all">Featured Projects</h1>
+					</div>
+				</div>
 				<h2 className="text-blue-500">What I&#39;m capable of.</h2>
 
 				<ul className="flex flex-col gap-16 mt-16">
@@ -13,9 +18,9 @@ const Projects = (props) => {
 						props.data.featured.map((d, i) => (
 							<li key={i} className="flex flex-col lg:flex-row group lg:even:flex-row-reverse">
 								<div className={`flex flex-col lg:flex-row items-center gap-6 w-full lg:w-3/5 justify-center ${i%2!=0? 'lg:flex-row-reverse' : ''}`}>
-									<span className="text-blue-500">0{i+1}</span>
-									<div className="relative w-full md:w-10/12 aspect-video border rounded-md border-2 bg-blue-500 border-blue-200">
-										<Image alt="Image" src={d.image_url} layout={'fill'} objectFit={'contain'} className={`w-full h-full ${i%2!=0? '-skew-y-3' : 'skew-y-3'}  rounded-md group-hover:skew-y-0 transition-all`}/>
+									<span className="text-blue-500 font-bold">0{i+1}</span>
+									<div className="relative w-full md:w-10/12 aspect-video border rounded-md bg-blue-400">
+										<Image alt="Image" src={d.image_url} layout={'fill'} objectFit={'contain'} className={`w-full h-full ${i%2!=0? '-rotate-6' : 'rotate-6'} rounded-md group-hover:rotate-0 transition-all`}/>
 									</div>
 								</div>
 								
@@ -23,7 +28,7 @@ const Projects = (props) => {
 									<div className="flex gap-2 text-sm w-full justify-center lg:justify-start">
 										{
 											d.keyword.map((d, i) => (
-												<span key={d} className="px-4 py-1 rounded-full border border-blue-500 text-blue-500 group-hover:text-white group-hover:bg-blue-500 transition-all">{d}</span>
+												<span key={d} className="px-4 py-1 rounded-full border border-blue-500 text-blue-500 group-hover:text-white group-hover:bg-blue-500 group-hover:from-blue-500 group-hover:via-blue-500 group-hover:to-blue-600 group-hover:bg-gradient-to-b transition-all">{d}</span>
 											))
 										}
 									
@@ -32,19 +37,23 @@ const Projects = (props) => {
 									<p className="mt-5 text-slate-500 md:px-20 lg:px-0 group-hover:text-slate-700">{d.desc}</p>
 									
 									<div className="mt-5 flex gap-4 text-sm justify-center lg:justify-start">
-										<a href={d.github_link} target="_blank" className="flex gap-2 group-hover:text-slate-600 hover:!text-blue-500 text-slate-500 items-center hoverable">
-											<span>Github</span> 
-											<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-											  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
-											</svg>
-										</a>
+										{ d.github_link!=""?
+											<a href={d.github_link} target="_blank" className="flex gap-2 group-hover:text-slate-600 hover:!text-blue-500 text-slate-500 items-center hoverable">
+												<span>Github</span> 
+												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+												  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
+												</svg>
+											</a> : ""
+										}
 
-										<a href={d.website_link} target="_blank" className="flex gap-2 group-hover:text-slate-600 items-center hover:!text-blue-500 text-slate-500 hoverable">
-											<span>Website</span>
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-											  <path fill-rule="evenodd" d="M15.75 2.25H21a.75.75 0 01.75.75v5.25a.75.75 0 01-1.5 0V4.81L8.03 17.03a.75.75 0 01-1.06-1.06L19.19 3.75h-3.44a.75.75 0 010-1.5zm-10.5 4.5a1.5 1.5 0 00-1.5 1.5v10.5a1.5 1.5 0 001.5 1.5h10.5a1.5 1.5 0 001.5-1.5V10.5a.75.75 0 011.5 0v8.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V8.25a3 3 0 013-3h8.25a.75.75 0 010 1.5H5.25z" clip-rule="evenodd" />
-											</svg>
-										</a>
+										{ d.website_link!=""?
+											<a href={d.website_link} target="_blank" className="flex gap-2 group-hover:text-slate-600 items-center hover:!text-blue-500 text-slate-500 hoverable">
+												<span>Website</span>
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+												  <path fill-rule="evenodd" d="M15.75 2.25H21a.75.75 0 01.75.75v5.25a.75.75 0 01-1.5 0V4.81L8.03 17.03a.75.75 0 01-1.06-1.06L19.19 3.75h-3.44a.75.75 0 010-1.5zm-10.5 4.5a1.5 1.5 0 00-1.5 1.5v10.5a1.5 1.5 0 001.5 1.5h10.5a1.5 1.5 0 001.5-1.5V10.5a.75.75 0 011.5 0v8.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V8.25a3 3 0 013-3h8.25a.75.75 0 010 1.5H5.25z" clip-rule="evenodd" />
+												</svg>
+											</a> : ""
+										}
 									</div>
 								</div>
 							</li>

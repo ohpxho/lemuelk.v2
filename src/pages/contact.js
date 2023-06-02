@@ -6,7 +6,12 @@ const Contact = () => {
 		<div id="contact" className="flex justify-center w-full h-max">
 			<div className="flex flex-col w-full lg:w-9/12 xl:w-7xl py-32 px-6 max-w-7xl h-max">
 				<div className="w-full flex flex-col items-center justify-center">
-					<h1 className="text-3xl text-blue-500 font-bold">Contact Me</h1>
+					<div className="flex w-full justify-center">
+						<div className="relative w-max group">
+							<h1 className="text-3xl font-bold text-blue-700">Contact Me</h1>
+							<h1 className="absolute top-0 text-3xl -translate-y-0.5 group-hover:-translate-y-0.7 font-bold text-blue-500 transition-all">Contact Me</h1>
+						</div>
+					</div>
 					<h2 className="text-blue-500">Get In Touch</h2>
 
 					<div className="flex gap-4 mt-16">

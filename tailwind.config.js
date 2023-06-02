@@ -14,6 +14,12 @@ module.exports = {
       },
        width: {
         '7xl': '80rem',
+      },
+      translate: {
+        '0.7' : '0.190rem'
+      },
+      transitionDuration: {
+        '50000': '50000ms',
       }
     },
   },

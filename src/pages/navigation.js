@@ -3,7 +3,11 @@ const Navigation = () => {
 	return (
 		<div className="relative pt-10 flex justify-center w-full h-max top-0">
 			<div className="flex w-full xl:w-7xl items-center py-4 px-6 justify-between max-w-7xl h-max">
-				<a href="#main"><h1 className="font-bold text-2xl text-blue-500 hoverable">LEMUELK.</h1></a>
+				<div className="relative hoverable">
+					<a href="#main"><h1 className="font-bold text-2xl text-blue-700">LEMUELK.</h1></a>
+					<p className="absolute top-0 font-bold text-2xl text-blue-500 -translate-y-0.5 hover:-translate-y-0.7">LEMUELK.</p>
+				</div>
+
 				<ul className="gap-7 md:gap-12 flex items-center w-max text-sm">
 					<a className="hidden lg:block hoverable" href="#projects"><li>Projects</li></a>
 					<a className="hidden lg:block hoverable" href="#skills"><li>Skills</li></a>
