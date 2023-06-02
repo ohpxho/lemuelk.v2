@@ -14,8 +14,8 @@ const Projects = (props) => {
 							<li key={i} className="flex flex-col lg:flex-row group lg:even:flex-row-reverse">
 								<div className={`flex flex-col lg:flex-row items-center gap-6 w-full lg:w-3/5 justify-center ${i%2!=0? 'lg:flex-row-reverse' : ''}`}>
 									<span className="text-blue-500">0{i+1}</span>
-									<div className="w-full md:w-10/12 aspect-video border rounded-md border-2 bg-blue-500 border-blue-200">
-										<Image alt="Image" width={500} height={500} src={d.image_url} className={`w-full h-full ${i%2!=0? '-skew-y-3' : 'skew-y-3'}  rounded-md group-hover:skew-y-0 transition-all`}/>
+									<div className="relative w-full md:w-10/12 aspect-video border rounded-md border-2 bg-blue-500 border-blue-200">
+										<Image alt="Image" src={d.image_url} layout={'fill'} objectFit={'contain'} className={`w-full h-full ${i%2!=0? '-skew-y-3' : 'skew-y-3'}  rounded-md group-hover:skew-y-0 transition-all`}/>
 									</div>
 								</div>
 								
