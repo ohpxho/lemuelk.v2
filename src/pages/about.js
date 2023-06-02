@@ -1,3 +1,4 @@
+import Image from 'next/image';
 
 const About = (props) => {
 	return (
@@ -9,7 +10,7 @@ const About = (props) => {
 				<div className="w-full flex flex-col lg:flex-row items-center mt-16"> 
 					<div className="w-full lg:w-1/2 flex items-center justify-center">
 						<div class="w-80 object-fit bg-blue-500 translate-y-3 -translate-x-3">
-							<img src={props.data? props.data.image_url : ""} className="h-full w-full -translate-y-5 translate-x-5"/>
+							<Image alt="ME" width={500} height={500} src={props.data? props.data.image_url : ""} className="h-full w-full -translate-y-5 translate-x-5" />
 						</div>
 					</div>
 					

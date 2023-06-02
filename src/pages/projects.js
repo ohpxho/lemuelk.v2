@@ -1,3 +1,4 @@
+import Image from 'next/image';
 
 const Projects = (props) => {
 
@@ -5,16 +6,16 @@ const Projects = (props) => {
 		<div id="projects" className="relative flex justify-center w-full h-max bg-blue-100 z-20">
 			<div className="flex flex-col w-full xl:w-7xl py-32 px-6 max-w-7xl h-max text-center lg:text-start">
 				<h1 className="text-3xl text-blue-500 font-bold">Featured Projects</h1>
-				<h2 className="text-blue-500">What I'm capable of.</h2>
+				<h2 className="text-blue-500">What I&#39;m capable of.</h2>
 
 				<ul className="flex flex-col gap-16 mt-16">
 					{ props.data? 
 						props.data.featured.map((d, i) => (
-							<li className="flex flex-col lg:flex-row group lg:even:flex-row-reverse">
+							<li key={i} className="flex flex-col lg:flex-row group lg:even:flex-row-reverse">
 								<div className={`flex flex-col lg:flex-row items-center gap-6 w-full lg:w-3/5 justify-center ${i%2!=0? 'lg:flex-row-reverse' : ''}`}>
 									<span className="text-blue-500">0{i+1}</span>
 									<div className="w-full md:w-10/12 aspect-video border rounded-md border-2 bg-blue-500 border-blue-200">
-										<img src={d.image_url} className={`w-full h-full ${i%2!=0? '-skew-y-3' : 'skew-y-3'}  rounded-md group-hover:skew-y-0 transition-all`}/>
+										<Image alt="Image" width={500} height={500} src={d.image_url} className={`w-full h-full ${i%2!=0? '-skew-y-3' : 'skew-y-3'}  rounded-md group-hover:skew-y-0 transition-all`}/>
 									</div>
 								</div>
 								
@@ -22,7 +23,7 @@ const Projects = (props) => {
 									<div className="flex gap-2 text-sm w-full justify-center lg:justify-start">
 										{
 											d.keyword.map((d, i) => (
-												<span className="px-4 py-1 rounded-full border border-blue-500 text-blue-500 group-hover:text-white group-hover:bg-blue-500 transition-all">{d}</span>
+												<span key={d} className="px-4 py-1 rounded-full border border-blue-500 text-blue-500 group-hover:text-white group-hover:bg-blue-500 transition-all">{d}</span>
 											))
 										}
 									
@@ -58,7 +59,7 @@ const Projects = (props) => {
 					
 					{ props.data?
 						props.data.others.map((d,i) => (
-							<div className="w-full bg-blue-500 from-blue-500 via-blue-500 to-blue-700 bg-gradient-to-b text-white p-6 rounded-md hover:-translate-y-3 transition-all">
+							<div key={i} className="w-full bg-blue-500 from-blue-500 via-blue-500 to-blue-700 bg-gradient-to-b text-white p-6 rounded-md hover:-translate-y-3 transition-all">
 								<div className="flex justify-between text-white items-center">
 									<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" className="w-10 h-10"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
 									<div className="flex gap-3 items-center">
@@ -75,7 +76,7 @@ const Projects = (props) => {
 								<div className="flex gap-2 text-sm mt-5">
 									{
 										d.keyword.map((d, i) => (
-											<span className="text-blue-300">{d}</span>
+											<span key={d} className="text-blue-300">{d}</span>
 										))
 									}
 								</div>

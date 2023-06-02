@@ -16,7 +16,7 @@ const Skills = (props) => {
 								<ul className="mt-5 grid grid-cols-3 gap-4">
 									{ props.data?
 										props.data.frontend.map((d, i) => (
-											<li>{d.title}</li>
+											<li key={d.title}>{d.title}</li>
 										)) : ""
 									}
 								</ul>
@@ -27,7 +27,7 @@ const Skills = (props) => {
 							<ul className="flex w-full flex-col gap-4 mt-5">
 								{ props.data?
 									props.data.frontend.map((d, i) => (
-										<li className="flex w-full gap-4 items-center ">
+										<li key={d.title} className="flex w-full gap-4 items-center ">
 											<span>{d.title}</span>
 											<div className="w-full lg:w-80 flex h-2 rounded-full bg-slate-300 items-center">
 												<div className={`${d.proficiency} h-2 rounded-full bg-blue-500`}></div>
@@ -46,7 +46,7 @@ const Skills = (props) => {
 								<ul className="mt-5 grid grid-cols-3 gap-4">
 									{ props.data?
 										props.data.backend.map((d, i) => (
-											<li>{d.title}</li>
+											<li key={d.title}>{d.title}</li>
 										)) : ""
 									}
 								</ul>
@@ -57,7 +57,7 @@ const Skills = (props) => {
 							<ul className="flex w-full flex-col gap-4 mt-5">
 								{ props.data?
 									props.data.backend.map((d, i) => (
-										<li className="flex w-full gap-4 items-center ">
+										<li key={d.title} className="flex w-full gap-4 items-center ">
 											<span>{d.title}</span>
 											<div className="w-full lg:w-80 flex h-2 rounded-full bg-slate-300 items-center">
 												<div className={`${d.proficiency} h-2 rounded-full bg-blue-500`}></div>
@@ -76,7 +76,7 @@ const Skills = (props) => {
 								<ul className="mt-5 grid grid-cols-3 gap-4">
 									{ props.data?
 										props.data.tools.map((d, i) => (
-											<li>{d.title}</li>
+											<li key={d.title} >{d.title}</li>
 										)) : ""
 									}
 								</ul>
@@ -87,7 +87,7 @@ const Skills = (props) => {
 							<ul className="flex w-full flex-col gap-4 mt-5">
 								{ props.data?
 									props.data.tools.map((d, i) => (
-										<li className="flex w-full gap-4 items-center ">
+										<li key={d.title} className="flex w-full gap-4 items-center ">
 											<span>{d.title}</span>
 											<div className="w-full lg:w-80 flex h-2 rounded-full bg-slate-300 items-center">
 												<div className={`${d.proficiency} h-2 rounded-full bg-blue-500`}></div>
