@@ -1,6 +1,43 @@
+import React, { useEffect, useRef } from 'react';
+
 import Image from 'next/image';
 
+const FeaturedItem = ({ children }) => {
+  const itemRef = useRef(null);
+
+  useEffect(() => {
+    if (itemRef.current) {
+    	const ScrollReveal = require('scrollreveal').default;
+      	ScrollReveal().reveal(itemRef.current, {
+      		duration: 1000,
+      		scale: 0.85
+      	});
+    }
+  }, []);
+
+  return <li ref={itemRef} className="flex flex-col lg:flex-row group lg:even:flex-row-reverse">{children}</li>;
+};
+
+
+const OtherItem = ({ children }) => {
+  const itemRef = useRef(null);
+
+  useEffect(() => {
+    if (itemRef.current) {
+    	const ScrollReveal = require('scrollreveal').default;
+      	ScrollReveal().reveal(itemRef.current, {
+      		duration: 1000,
+      		scale: 0.85
+      	});
+    }
+  }, []);
+
+  return <div ref={itemRef} className="w-full bg-blue-500 from-blue-500 via-blue-500 to-blue-700 bg-gradient-to-b text-white p-6 rounded-md hover:-translate-y-3 transition-all">{children}</div>;
+};
+
+
 const Projects = (props) => {
+	const itemRef = useRef(null);
 
 	return (
 		<div id="projects" className="relative flex justify-center w-full h-max bg-blue-100 z-20">
@@ -16,7 +53,7 @@ const Projects = (props) => {
 				<ul className="flex flex-col gap-16 mt-16">
 					{ props.data? 
 						props.data.featured.map((d, i) => (
-							<li key={i} className="flex flex-col lg:flex-row group lg:even:flex-row-reverse">
+							<FeaturedItem key={i} >
 								<div className={`flex flex-col lg:flex-row items-center gap-6 w-full lg:w-3/5 justify-center ${i%2!=0? 'lg:flex-row-reverse' : ''}`}>
 									<span className="text-blue-500 font-bold">0{i+1}</span>
 									<div className="relative w-full md:w-10/12 aspect-video border rounded-md bg-blue-400">
@@ -56,19 +93,23 @@ const Projects = (props) => {
 										}
 									</div>
 								</div>
-							</li>
+							</FeaturedItem>
 						)) : ""
 					}
 				</ul>
 				
-				<h1 className="mt-10 font-bold text-blue-500 text-3xl">Other Noteworthy Projects</h1>
+				<div className="relative w-max group mt-10">
+					<h1 className="text-3xl font-bold text-blue-700">Other Noteworthy Projects</h1>
+					<h1 className="absolute top-0 text-3xl -translate-y-0.5 group-hover:-translate-y-0.7 font-bold text-blue-500 transition-all">Other Noteworthy Projects</h1>
+				</div>
+
 				<h2 className="text-blue-500">Got to do something more.</h2>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 text-start">
 					
 					{ props.data?
 						props.data.others.map((d,i) => (
-							<div key={i} className="w-full bg-blue-500 from-blue-500 via-blue-500 to-blue-700 bg-gradient-to-b text-white p-6 rounded-md hover:-translate-y-3 transition-all">
+							<OtherItem key={i}>
 								<div className="flex justify-between text-white items-center">
 									<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" className="w-10 h-10"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
 									<div className="flex gap-3 items-center">
@@ -89,7 +130,7 @@ const Projects = (props) => {
 										))
 									}
 								</div>
-							</div>
+							</OtherItem>
 						)) : ""
 					}
 					

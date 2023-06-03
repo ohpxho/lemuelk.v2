@@ -11,31 +11,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import gsap from 'gsap';
 
-
 const inter = Inter({ subsets: ['latin'] })
-
-function checkIfElementHalfInView(elements) {
-  const windowHeight = window.innerHeight;
-  const windowTopPosition = window.pageYOffset;
-  const windowBottomPosition = windowTopPosition + windowHeight;
-
-  elements.forEach((element) => {
-    const elementHeight = element.offsetHeight;
-    const elementTopPosition = element.offsetTop;
-    const elementBottomPosition = elementTopPosition + elementHeight;
-
-    const halfWindowHeight = windowHeight / 2;
-
-    // Calculate if the element occupies at least half of the window height
-    const isElementOccupyingHalf =
-      elementBottomPosition >= windowTopPosition &&
-      elementTopPosition <= windowBottomPosition - halfWindowHeight;
-
-    if(isElementOccupyingHalf) element.classList.add('in-view');
-    else element.classList.remove('in-view');
-  });
-}
-
 
 export default function Home() {
   const [data, setData] = useState({});
@@ -89,19 +65,6 @@ export default function Home() {
         hoverables[i].removeEventListener('mouseenter', onMouseHover);
         hoverables[i].removeEventListener('mouseleave', onMouseHoverOut);
       }
-    };
-  }, []);
-
-  useEffect(() => {
-    const animationElements = document.querySelectorAll('.animation-element');
-
-    const handleScroll = () => {
-      checkIfElementHalfInView(animationElements);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
