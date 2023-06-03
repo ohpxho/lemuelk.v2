@@ -58,15 +58,14 @@ const Main = (props) => {
   	}, []);
 
 	return (
-		<div id="main" className="flex justify-center w-full h-max">
-			<div className="pt-10 pb-44 flex w-full xl:w-7xl items-center px-6 max-w-7xl h-max">
+		<div id="main" className="flex pb-16 lg:pb-32 flex-col items-center w-full h-max">
+			<div className="pt-10 flex w-full xl:w-7xl items-center px-6 max-w-7xl h-max">
 				<div className="w-full">
 					<p className="anm_i">Hi there! I am</p>
 
 					<div className="relative anm_ii">
 						<h1 className="font-bold text-5xl md:text-7xl xl:text-8xl text-blue-700">Lemuel k So</h1>
 						<h1 className="absolute top-0 -translate-x-1 hover:-translate-x-1.5 lg:hover:-translate-x-2 transition-all font-bold text-5xl md:text-7xl xl:text-8xl text-blue-500">Lemuel k So</h1>
-						
 					</div>
 
 					<p className="mt-5 anm_iii">{ props.data? props.data.desc : 'I am a web developer with a passion for continuous learning and problem-solving. I am committed to delivering high-quality web solutions by leveraging my problem-solving skills and staying up-to-date with the latest industry trends.' }</p>
@@ -87,6 +86,13 @@ const Main = (props) => {
 					 	<div className="text-blue-700" ref={tagCloudRef}></div>
 					 </div>
 				</div>
+			</div>
+
+			<div className="w-full flex gap-3 justify-center items-center mt-10 anm_v">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="animate-bounce w-6 h-6">
+				  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+				</svg>
+				<p>Scroll down</p>
 			</div>
 		</div>
 	);
