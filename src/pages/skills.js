@@ -39,7 +39,7 @@ const Skills = (props) => {
 				<div className="w-8/12"></div>
 			</div>
 
-			<div className="flex flex-col w-full xl:w-7xl py-32 px-6 max-w-7xl h-max test animation-element">
+			<div className="flex flex-col w-full xl:w-7xl py-32 px-6 max-w-7xl h-max">
 				<div className="relative w-max group anm_i">
 					<h1 className="text-3xl font-bold text-blue-700">Skills & Technologies</h1>
 					<h1 className="absolute top-0 text-3xl -translate-y-0.5 group-hover:-translate-y-0.7 font-bold text-blue-500 transition-all">Skills & Technologies</h1>
@@ -85,7 +85,7 @@ const Skills = (props) => {
 						</div>
 					</div>
 
-					<div className="group w-full mt-10 lg:mt-0 anm_ii">
+					<div className="group w-full mt-10 lg:mt-0 anm_i">
 						<div className="w-full bg-blue-700 rounded-md">
 							<div className="w-full h-full p-6 bg-blue-500 text-white rounded-md -translate-y-2 group-hover:-translate-y-3 transition-all">
 								<div className="relative w-full h-full">
@@ -121,7 +121,7 @@ const Skills = (props) => {
 						</div>
 					</div>
 
-					<div className="group w-full mt-10 xl:mt-0 anm_iii">
+					<div className="group w-full mt-10 xl:mt-0 anm_i">
 						<div className="w-full bg-blue-700 rounded-md">
 							<div className="w-full h-full p-6 bg-blue-500 text-white rounded-md -translate-y-2 group-hover:-translate-y-3 transition-all">
 								<div className="relative w-full h-full">
@@ -159,7 +159,7 @@ const Skills = (props) => {
 					</div>
 				</div>
 
-				<div className="anm_iv">
+				<div className="anm_i">
 					<p className="mt-10 text-orange-500">This reflects my personal opinion, which is based on an assessment of my own knowledge and experience.</p>
 				</div>
 			</div>
