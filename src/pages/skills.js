@@ -32,6 +32,13 @@ const Skills = (props) => {
 
 	return (
 		<div id="skills" className="flex justify-center w-full h-max">
+			<div className="hidden">
+				<div className="w-10/12"></div>
+				<div className="w-9/12"></div>
+				<div className="w-2/5"></div>
+				<div className="w-8/12"></div>
+			</div>
+
 			<div className="flex flex-col w-full xl:w-7xl py-32 px-6 max-w-7xl h-max test animation-element">
 				<div className="relative w-max group anm_i">
 					<h1 className="text-3xl font-bold text-blue-700">Skills & Technologies</h1>
