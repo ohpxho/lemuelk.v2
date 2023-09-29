@@ -152,7 +152,10 @@ const Skills = (props) => {
 				</div>
 
 				<div className="anm_iv">
-					<p className="mt-10 text-orange-500"></p>
+					<p className="text-orange-500 w-10/12"></p>
+					<p className="text-orange-500 w-9/12"></p>
+					<p className="text-orange-500 w-2/5"></p>
+					<p className="text-orange-500 w-8/12"></p>
 				</div>
 			</div>
 		</div>
