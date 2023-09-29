@@ -84,13 +84,13 @@ export default function Home() {
         </div>
       </div>
 
-      <Navigation />
-      <Main data={data.main} />
+      <Navigation/>
+      <Main data={data.main}/>
       <Projects data={data.projects}/>
       <Skills data={data.skills}/>
       <About data={data.about}/>
-      <Contact />
-      <Footer />
+      <Contact/>
+      <Footer/>
     </main>
   )
 }
