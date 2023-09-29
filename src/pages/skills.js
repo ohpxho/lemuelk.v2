@@ -70,7 +70,6 @@ const Skills = (props) => {
 													<div className={`${d.proficiency} h-2 rounded-full bg-blue-500`}></div>
 												</div>
 											</td>
-											<td width="10%" className="text-sm text-slate-500">{d.percent}</td>
 										</tr>
 									)) : ""
 								}
@@ -106,7 +105,7 @@ const Skills = (props) => {
 													<div className={`${d.proficiency} h-2 rounded-full bg-blue-500`}></div>
 												</div>
 											</td>
-											<td width="10%" className="text-sm text-slate-500">{d.percent}</td>
+											
 										</tr>
 									)) : ""
 								}
@@ -142,7 +141,7 @@ const Skills = (props) => {
 													<div className={`${d.proficiency} h-2 rounded-full bg-blue-500`}></div>
 												</div>
 											</td>
-											<td width="10%" className="text-sm text-slate-500">{d.percent}</td>
+											
 										</tr>
 									)) : ""
 								}
@@ -153,7 +152,7 @@ const Skills = (props) => {
 				</div>
 
 				<div className="anm_iv">
-					<p className="mt-10 text-orange-500">This reflects my personal opinion, which is based on an assessment of my own knowledge and experience.</p>
+					<p className="mt-10 text-orange-500"></p>
 				</div>
 			</div>
 		</div>

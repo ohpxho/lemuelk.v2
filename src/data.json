@@ -3,7 +3,7 @@
     "desc": "I am a web developer with a passion for continuous learning and problem-solving. I am committed to delivering high-quality web solutions by leveraging my problem-solving skills and staying up-to-date with the latest industry trends."
   },
   "about": {
-    "image_url": "/me.jpg",
+    "image_url": "/me.JPG",
   	"first": "I have successfully completed my Bachelor of Science in Information Technology (BSIT) degree at Quezon City University. Throughout my academic journey, I have honed my skills and deepened my knowledge in various areas of technology. I am confident in my abilities and enthusiastic about continuously learning and growing through hands-on experiences.",
   	"second": "I am passionate about web development and have a strong interest in AI and Machine Learning. I have acquired a solid understanding of clean coding practices and good design principles. Additionally, I possess a strong knowledge of Algorithms and Data Structures, regularly challenging myself to solve problems on platforms such as LeetCode and CodeChef. Continuous learning is an integral part of my journey, and I find great comfort in constantly improving my problem-solving skills. I am determined to enhance my abilities in order to excel in my chosen fields."
   },
@@ -29,6 +29,30 @@
     "others": [
       {
         "image_url": "",
+        "title": "QCU OCAD",
+        "desc": "An online consultation and document request with SMS notification for Quezon City University.",
+        "keyword": ["php", "mysql", "capstone"],
+        "website_link": "",
+        "github_link": "https://github.com/ohpxho/qcu-ocad"
+      },
+      {
+        "image_url": "",
+        "title": "Connect4CLI",
+        "desc": "An online connect 4 pvp game in CLI.",
+        "keyword": ["node", "express", "socket", "yargs"],
+        "website_link": "",
+        "github_link": "https://github.com/ohpxho/connect4cli"
+      },
+      {
+        "image_url": "",
+        "title": "Interview Prep. Helper",
+        "desc": "I tailored this application for helping me prepare in interviews, which displays questions randomly. The questions are collected and combined from various sites. ",
+        "keyword": ["node", "express", "socket", "yargs"],
+        "website_link": "https://text-randomizer.vercel.app/",
+        "github_link": "https://github.com/ohpxho/text-randomizer.git"
+      },
+      {
+        "image_url": "",
         "title": "Weather App",
         "desc": "A weather application that displays the current and future weather forecast using weather api. Implemented with chart js to visualize the temparature, humidity, and wind.",
         "keyword": ["javascript", "api", "chartjs"],
@@ -42,14 +66,6 @@
         "keyword": ["mean", "api", "animation"],
         "website_link": "",
         "github_link": "https://github.com/ohpxho/lemuelk..git"
-      },
-      {
-        "image_url": "",
-        "title": "Tic Tac Toe",
-        "desc": "A tic tac toe game developed using angular.",
-        "keyword": ["angular", "game"],
-        "website_link": "",
-        "github_link": "https://github.com/ohpxho/angular-tictactoe"
       }
     ]
   },
