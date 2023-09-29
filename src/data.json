@@ -46,7 +46,7 @@
       {
         "image_url": "",
         "title": "Interview Prep. Helper",
-        "desc": "I tailored this application for helping me prepare in interviews, which displays questions randomly. The questions are collected and combined from various sites. ",
+        "desc": "I tailored this application for helping me prepare in interviews, which displays questions randomly. The questions are collected and combined from various websites. ",
         "keyword": ["node", "express", "socket", "yargs"],
         "website_link": "https://text-randomizer.vercel.app/",
         "github_link": "https://github.com/ohpxho/text-randomizer.git"
