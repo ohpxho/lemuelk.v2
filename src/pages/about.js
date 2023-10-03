@@ -36,7 +36,7 @@ const About = (props) => {
 				</div>
 				<h2 className="text-blue-500 text-center about_anm_i">Who Am I?</h2>
 
-				<div className="w-full flex flex-col lg:flex-row items-center mt-16"> 
+				<div className="w-full overflow-hidden flex flex-col lg:flex-row items-center mt-16"> 
 					<div className="w-full lg:w-1/2 flex items-center justify-center about_anm_ii">
 						<div className="w-80 object-fit bg-blue-500 translate-y-3 -translate-x-3">
 							<Image alt="ME" width={500} height={500} src={props.data? props.data.image_url : ""} className="h-full w-full transition-all -translate-y-5 translate-x-5" />
