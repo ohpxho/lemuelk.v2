@@ -98,7 +98,7 @@ const Projects = (props) => {
 					}
 				</ul>
 				
-				<div className="relative w-max group mt-10">
+				<div className="relative group mt-10">
 					<h1 className="text-3xl font-bold text-blue-700">Other Noteworthy Projects</h1>
 					<h1 className="absolute top-0 text-3xl -translate-y-0.5 group-hover:-translate-y-0.7 font-bold text-blue-500 transition-all">Other Noteworthy Projects</h1>
 				</div>
